@@ -260,40 +260,33 @@
 <h2 id="使用Hexo搭建博客"><a href="#使用Hexo搭建博客" class="headerlink" title="使用Hexo搭建博客"></a>使用Hexo搭建博客</h2><p>安装好Node.js和Git之后，我们就可以通过命令行愉快的进行各种安装啦！</p>
 <p>安装Git后在桌面或者文件夹里邮件会多出两个选项，一个是Git GUI Here，另一个是Git Bash Here，前者是打开git的图形界面，后者是打开git命令行，我们通常直接使用命令行也就是Git Bash进行操作。那我们现在开始。</p>
 <h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>在合适的位置（以后这个位置就作为博客的本地文件夹啦）新建一个文件夹，在文件夹中打开Git Bash，当然其他命令行也是可以的比如PowerShell，但是注意一般是要管理员权限的哦，输入以下命令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#全局安装Hexo脚手架</span>
-<span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#全局安装Hexo脚手架</span></span><br><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 <p>安装完后可以输入</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#查看hexo版本</span>
-hexo <span class="token parameter variable">-v</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看hexo版本</span></span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
 
 <p>查看是否安装成功，出现版本号就表示没问题啦！</p>
 <p>第一次使用要初始化一下，可能会比较慢</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 
 <p>完成之后就搭建好了，分别输入下面的指令在本地进行预览</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#Generate编译成静态文件</span>
-hexo g
-<span class="token comment">#部署到本地</span>
-hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Generate编译成静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment">#部署到本地</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>成功后出现下面的提示，打开这个网址就可以看到博客的预览啦，里面有篇自带的Hello World</p>
 <p><img src="https://img1.imgtp.com/2022/08/31/elFeZzRx.png" alt="image-20220831151650028"></p>
 <h4 id="在博客中写文章"><a href="#在博客中写文章" class="headerlink" title="在博客中写文章"></a>在博客中写文章</h4><p>Hexo是支持Markdown语法的，也就是说，我们只需要在本地把文章按格式写在md文件里，Hexo就可以自动解析并生成设定好的好看的样式，在Hexo里写文章主要有两种方式。</p>
-<h5 id="第一种：使用命令创建文件"><a href="#第一种：使用命令创建文件" class="headerlink" title="第一种：使用命令创建文件"></a>第一种：使用命令创建文件</h5><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#生成一篇叫hello的文章</span>
-hexo new post <span class="token string">"hello"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h5 id="第一种：使用命令创建文件"><a href="#第一种：使用命令创建文件" class="headerlink" title="第一种：使用命令创建文件"></a>第一种：使用命令创建文件</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#生成一篇叫hello的文章</span></span><br><span class="line">hexo new post <span class="string">&quot;hello&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>这个指令会在source&#x2F;_posts&#x2F;目录中生成一个”hello.md”文件，我们打开这个文件进行就可以了。当然我们也可以自己创建这个文件，也就是第二种方法</p>
 <h5 id="第二种：手动创建md文件"><a href="#第二种：手动创建md文件" class="headerlink" title="第二种：手动创建md文件"></a>第二种：手动创建md文件</h5><p>打开source&#x2F;_posts&#x2F;目录，新建一个.md文件, 名称可以自己取，编辑这个文件。在文章的开头写上这些内容：</p>
 <p><img src="https://img1.imgtp.com/2022/08/31/HaxszoeT.png" alt="image-20220831152652788"></p>
 <p>其中title后面填博客文章的标题，date是文章发表时间格式为 YYYY-MM-dd hh-mm-ss，tags可以添加文章标签。这些信息会被单独的读出来显示在博客中。</p>
 <p>完成后依旧输入指令部署即可。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo g
-hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <h4 id="使用Hexo主题"><a href="#使用Hexo主题" class="headerlink" title="使用Hexo主题"></a>使用Hexo主题</h4><p>Hexo受到推崇的一个很大原因就是提供了很多现成的主题，用户可以直接在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">官网</a>里面浏览或者搜索自己喜欢的主题，点击图片进入预览界面，点击名称进入这个主题的Github页面。</p>
 <p>如果想要使用某个主题（这里以NexT为例），也是非常方便的，打开对应主题的Github界面，把源码下载到本地博客的Theme文件夹中，如使用Git命令行:</p>
-<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">git clone https:&#x2F;&#x2F;github.com&#x2F;next-theme&#x2F;hexo-theme-next themes&#x2F;next<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 
 <p>然后使用编辑器打开根目录中的_config.yml文件，修改其中theme:字段，后面根据你使用的主题填上，如我的是“next”或者“hexo-theme-next”，保存后重新部署即可（依旧是hexo g和hexo s指令）</p>
 <p><img src="https://img1.imgtp.com/2022/09/02/SjqPLeXh.png" alt="image-20220902232346025"></p>

@@ -257,10 +257,10 @@
 <p><img src="https://img1.imgtp.com/2022/09/02/pxTyTBf5.png" alt="image-20220902234908654"></p>
 <p>现在已经成功的把这些菜单栏目显示出来了，但是还不能用，点进去什么东西都没有，还需要进行下面一步操作，这里以Tags为例</p>
 <p>命令行输入：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo n page tags<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n page tags</span><br></pre></td></tr></table></figure>
 
 <p>在source目录中就会出现一个tags文件夹，打开其中的index.md，修改title属性为你想要起的名字如：标签等，在下面添加</p>
-<pre class="line-numbers language-none"><code class="language-none">type: &quot;tags&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
 
 <p>的字段，重新部署，就可以正常使用tags啦（如我这里已经有标签为“杂谈”的博客），就会显示为：<img src="https://img1.imgtp.com/2022/09/03/522MH5Bn.png" alt="image-20220903133403339" style="zoom:67%;" /></p>
 <p>其他菜单栏同理~</p>
@@ -271,9 +271,7 @@
 <h4 id="设置文章内代码样式"><a href="#设置文章内代码样式" class="headerlink" title="设置文章内代码样式"></a>设置文章内代码样式</h4><p>打开主题级的配置文件，找到social字段。</p>
 <p>在<a target="_blank" rel="noopener" href="https://theme-next.js.org/highlight/">这个网址</a>里面可以找到所有可用样式，选择好后按说明填好就可以了，如图<img src="https://img1.imgtp.com/2022/09/03/qnq8EhgH.png" alt="image-20220903160903748" style="zoom: 50%;" /></p>
 <h4 id="设置博客的图标Favicon"><a href="#设置博客的图标Favicon" class="headerlink" title="设置博客的图标Favicon"></a>设置博客的图标Favicon</h4><p>找一张<code>.ico</code>格式的图标,或者去别的网站下载或者制作，并将图标名称改为<code>favicon.ico</code>，然后把图标放在<code>/themes/next/source/images</code>里，并且修改主题配置文件：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">favicon</span><span class="token punctuation">:</span>
-  <span class="token key atrule">small</span><span class="token punctuation">:</span> /images/favicon.ico
-  <span class="token key atrule">medium</span><span class="token punctuation">:</span> /images/favicon.ico<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">favicon:</span></span><br><span class="line">  <span class="attr">small:</span> <span class="string">/images/favicon.ico</span></span><br><span class="line">  <span class="attr">medium:</span> <span class="string">/images/favicon.ico</span></span><br></pre></td></tr></table></figure>
 
 
 
